@@ -10,25 +10,26 @@ class func
         Scanner sc=new Scanner(System.in);
         System.out.println("enter string");
         s=sc.nextLine();
-        int k=obj.calc(s);
-        System.out.println(k);
+        obj.calc(s);
+        
     }
-    public int calc(String s1)
+    public void calc(String s1)
     {
-        int l,i,c=0;
-        char ch;
+        int l;
+        char ch1,ch2;
         l=s1.length();
-        s1=s1.toLowerCase();
-        for(i=0;i<l;i++)
+        if(l%2==0)
         {
-            ch=s1.charAt(i);
-            
-            if(ch =='a'||ch =='e'||ch =='i'||ch =='o'||ch =='u')
-            {
-                c++;
-            }
+          ch1=s1.charAt((l/2));
+          ch2=s1.charAt(((l/2)-1));
+          System.out.println(ch1+" "+ch2);
         }
-        return c;
+        else
+        {
+            ch1=s1.charAt(l/2);
+            System.out.println(ch1);
+        }
+        
         
     }
     
